@@ -50,8 +50,8 @@ public class ObstacleManager implements ViewControllerListener{
         obstacle.add(obstacleItem2);
 
         Obstacle obstacleItem3 = new Obstacle();
-        obstacleItem3.circle= new Circle(getRandomLocationX(), getRandomLocationY(), circleColor, 20);
-        obstacleItem3.square= new Square(getRandomLocationX(), getRandomLocationY(), squareColor, 20);
+        obstacleItem3.circle = new Circle(getRandomLocationX(), getRandomLocationY(), circleColor, 20);
+        obstacleItem3.square = new Square(getRandomLocationX(), getRandomLocationY(), squareColor, 20);
         obstacle.add(obstacleItem3);
 
         Obstacle obstacleItem4 = new Obstacle();
@@ -71,33 +71,34 @@ public class ObstacleManager implements ViewControllerListener{
     @Override
     public void render(Graphics2D g2) {
 
-        for(int i=0; i<obstacle.size();i++){
+        for (int i=0; i<obstacle.size();i++) {
             if(obstacle.get(i).collisionCircle==false)
                 obstacle.get(i).circle.draw(g2);
 
-            if(obstacle.get(i).collisionSquare==false)
+            if (obstacle.get(i).collisionSquare==false)
                 obstacle.get(i).square.draw(g2);
         }
         
     }
 
-    public int getRandomLocationX(){
+    public int getRandomLocationX() {
         int min=15;
         int max=700;
-        return (int)(Math.random()*(max-min+1)+min);
+        return (int)(Math.random() * (max-min+1) + min);
     }
-    public int getRandomLocationY(){
+    public int getRandomLocationY() {
         int min=20;
         int max=570;
-        return (int)(Math.random()*(max-min+1)+min);
+        return (int)(Math.random()*(max-min+1) + min);
     }
 
     public boolean checkCollisionOccur(Double collisionBox) {
 
         boolean isCollide = false;
 
-        for(int i=0; i<obstacle.size(); i++) {
-            if(!obstacle.get(i).collisionCircle) {
+        for (int i=0; i<obstacle.size(); i++) {
+
+            if (!obstacle.get(i).collisionCircle) {
 
                 if (hasSameLocation(collisionBox,obstacle.get(i).circle.getCollisionBox())) {
                     obstacle.get(i).collisionCircle=true;
@@ -119,8 +120,8 @@ public class ObstacleManager implements ViewControllerListener{
     }
 
 
-    public boolean hasSameLocation(Double carBox, Double objectBox){
-        if(carBox.intersects(objectBox))
+    public boolean hasSameLocation(Double carBox, Double objectBox) {
+        if (carBox.intersects(objectBox))
             return true;
         else 
             return false;

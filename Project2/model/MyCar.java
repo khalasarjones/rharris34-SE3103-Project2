@@ -188,13 +188,13 @@ public class MyCar implements CarControllerListener,ViewControllerListener {
 
     @Override
     public void moveBackward() {
-        topBody = new Square((int)topBody.getLocation().x-DISTANCE, (int)topBody.getLocation().y, normalColor, 30);
+        topBody = new Square((int)topBody.getLocation().x - DISTANCE, (int)topBody.getLocation().y, normalColor, 30);
         
-        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x-DISTANCE, (int)bottomBodyRear.getLocation().y, normalColor, 30);
-        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x-DISTANCE, (int)bottomBodyFront.getLocation().y, normalColor, 30);
+        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x - DISTANCE, (int)bottomBodyRear.getLocation().y, normalColor, 30);
+        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x - DISTANCE, (int)bottomBodyFront.getLocation().y, normalColor, 30);
         
-        rearTire = new Circle((int)rearTire.getLocation().x-DISTANCE, (int)rearTire.getLocation().y, normalColor, 20);
-        frontTire = new Circle((int)frontTire.getLocation().x-DISTANCE, (int)frontTire.getLocation().y, normalColor, 20);
+        rearTire = new Circle((int)rearTire.getLocation().x - DISTANCE, (int)rearTire.getLocation().y, normalColor, 20);
+        frontTire = new Circle((int)frontTire.getLocation().x - DISTANCE, (int)frontTire.getLocation().y, normalColor, 20);
         
         updateColorMode();
     }
@@ -202,13 +202,13 @@ public class MyCar implements CarControllerListener,ViewControllerListener {
 
     @Override
     public void moveUpward() {
-        topBody = new Square((int)topBody.getLocation().x, (int)topBody.getLocation().y-DISTANCE, brokenColor, 30);
+        topBody = new Square((int)topBody.getLocation().x, (int)topBody.getLocation().y - DISTANCE, brokenColor, 30);
         
-        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x, (int)bottomBodyRear.getLocation().y-DISTANCE, normalColor, 30);
-        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x, (int)bottomBodyFront.getLocation().y-DISTANCE, normalColor, 30);
+        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x, (int)bottomBodyRear.getLocation().y - DISTANCE, normalColor, 30);
+        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x, (int)bottomBodyFront.getLocation().y - DISTANCE, normalColor, 30);
         
-        rearTire = new Circle((int)rearTire.getLocation().x, (int)rearTire.getLocation().y-DISTANCE, normalColor, 20);
-        frontTire = new Circle((int)frontTire.getLocation().x, (int)frontTire.getLocation().y-DISTANCE, normalColor, 20);
+        rearTire = new Circle((int)rearTire.getLocation().x, (int)rearTire.getLocation().y - DISTANCE, normalColor, 20);
+        frontTire = new Circle((int)frontTire.getLocation().x, (int)frontTire.getLocation().y - DISTANCE, normalColor, 20);
         
         updateColorMode();
     }
@@ -216,13 +216,13 @@ public class MyCar implements CarControllerListener,ViewControllerListener {
 
     @Override
     public void moveDownward() {
-        topBody = new Square((int)topBody.getLocation().x, (int)topBody.getLocation().y+DISTANCE, normalColor, 30);
+        topBody = new Square((int)topBody.getLocation().x, (int)topBody.getLocation().y + DISTANCE, normalColor, 30);
         
-        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x, (int)bottomBodyRear.getLocation().y+DISTANCE, normalColor, 30);
-        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x, (int)bottomBodyFront.getLocation().y+DISTANCE, normalColor, 30);
+        bottomBodyRear = new Square((int)bottomBodyRear.getLocation().x, (int)bottomBodyRear.getLocation().y + DISTANCE, normalColor, 30);
+        bottomBodyFront = new Square((int)bottomBodyFront.getLocation().x, (int)bottomBodyFront.getLocation().y + DISTANCE, normalColor, 30);
         
-        rearTire = new Circle((int)rearTire.getLocation().x, (int)rearTire.getLocation().y+DISTANCE, normalColor, 20);
-        frontTire = new Circle((int)frontTire.getLocation().x, (int)frontTire.getLocation().y+DISTANCE, normalColor, 20);
+        rearTire = new Circle((int)rearTire.getLocation().x, (int)rearTire.getLocation().y + DISTANCE, normalColor, 20);
+        frontTire = new Circle((int)frontTire.getLocation().x, (int)frontTire.getLocation().y + DISTANCE, normalColor, 20);
 
         updateColorMode();
     }
@@ -232,7 +232,7 @@ public class MyCar implements CarControllerListener,ViewControllerListener {
     public boolean hasCarDestroyed() {
         boolean gameOver = false;
 
-        if(isBottomBodyFrontHitted>=2 && isbottomBodyRearHitted>=2 && isTopBodyHitted>=2 && isFrontTireHitted>=2 && isRearTireHitted>=2)
+        if (isBottomBodyFrontHitted >= 2 && isbottomBodyRearHitted >= 2 && isTopBodyHitted >= 2 && isFrontTireHitted >= 2 && isRearTireHitted >=2)
             gameOver=true;
 
         return gameOver;

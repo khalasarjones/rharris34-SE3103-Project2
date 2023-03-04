@@ -22,14 +22,20 @@ public class ButtonListener implements ActionListener{
         //System.out.println(button.getText()); 
 
         if ("Add 10".equals(button.getText())) {
+
             panel.getCanvas().loadObstacles();
             panel.getCanvas().repaint();
+
         } else if ("Clear All".equals(button.getText())) {
+
             panel.getCanvas().resetObstaclesManager();
             panel.getCanvas().repaint();
+
         } else if ("Fix Car".equals(button.getText())) {
+
             panel.getCanvas().fixCar();
             panel.getCanvas().repaint();
+            
         } else
             System.out.println("Invalid button"); 
     }

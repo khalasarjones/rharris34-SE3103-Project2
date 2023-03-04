@@ -52,7 +52,7 @@ public class Canvas extends JPanel{
 
     // fixCar Method
     public void fixCar(){
-        car=new MyCar();
+        car = new MyCar();
         gameOver.setGameOver(false);
     }
     
@@ -61,39 +61,39 @@ public class Canvas extends JPanel{
         obstacleManager=new ObstacleManager();
         gameOver.setGameOver(false);
     }
-    public void loadObstacles(){
+    public void loadObstacles() {
         obstacleManager.loadObstacles();
     }
 
 
     public void checkCollisionOccurrences(){
     
-        if(car.isTopBodyHitted<2){
+        if (car.isTopBodyHitted<2){
             if(obstacleManager.checkCollisionOccur(car.getTopBody().getCollisionBox())){
                 car.hitTopBody();
             }
         }
 
-        if(car.isbottomBodyRearHitted<2){
-            if(obstacleManager.checkCollisionOccur(car.getBottomBodyRear().getCollisionBox())){
+        if (car.isbottomBodyRearHitted<2){
+            if (obstacleManager.checkCollisionOccur(car.getBottomBodyRear().getCollisionBox())){
                 car.hitBottomBodyRear();
             }
         }
 
-        if(car.isBottomBodyFrontHitted<2){
+        if (car.isBottomBodyFrontHitted<2){
             if(obstacleManager.checkCollisionOccur(car.getBottomBodyFront().getCollisionBox())){
                 car.hitBottomBodyFront();
             } 
         }
 
         if(car.isFrontTireHitted<2){
-            if(obstacleManager.checkCollisionOccur(car.getFrontTire().getCollisionBox())){
+            if (obstacleManager.checkCollisionOccur(car.getFrontTire().getCollisionBox())){
                 car.hitFrontTire();
             } 
         }
 
-        if(car.isRearTireHitted<2){
-            if(obstacleManager.checkCollisionOccur(car.getRearTire().getCollisionBox())){
+        if (car.isRearTireHitted<2){
+            if (obstacleManager.checkCollisionOccur(car.getRearTire().getCollisionBox())){
                 car.hitRearTire();
             } 
         }        

@@ -17,7 +17,7 @@ public class GameOver implements ViewControllerListener{
     @Override
     public void render(Graphics2D g2) {
 
-        if(hasGameOver){
+        if (hasGameOver) {
             g2.setColor(normalColor);
             g2.setFont(serifFont);
             g2.drawString("Game Over", 600/2, 700/2);
